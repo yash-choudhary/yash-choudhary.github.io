@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "slug": "how-this-site-works",
+      "title": "How this site works: a portfolio driven entirely by JSON",
+      "date": "2026-07-06",
+      "summary": "Every word on this site is streamed from a content store at runtime — here's the architecture, and why updating my portfolio now means editing a JSON file, not HTML.",
+      "file": "content/writing/how-this-site-works.md"
+    }
+  ]
+}

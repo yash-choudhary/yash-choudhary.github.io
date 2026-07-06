@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "role": "Senior Full-Stack Developer",
+      "company": "Enovate IT Outsourcing Pvt. Ltd.",
+      "location": "Pune, India",
+      "start": "Apr 2025",
+      "end": "Aug 2025",
+      "bullets": [
+        "Migrated a production system from monolithic to microservice architecture, reducing running costs by nearly 30% and improving scalability",
+        "Overhauled a banking app authentication module, integrating 2FA and advanced security controls",
+        "Delivered a PMS mapping framework enabling integration with leading PMS services, capturing 54% of the US vacation rental market"
+      ],
+      "tags": ["Microservices", "Node.js", "Auth & Security", "System Design"]
+    },
+    {
+      "role": "Full-Stack Developer",
+      "company": "Enovate IT Outsourcing Pvt. Ltd.",
+      "location": "Pune, India",
+      "start": "Jul 2022",
+      "end": "Mar 2025",
+      "bullets": [
+        "Improved banking application API throughput by 30% via Elasticsearch optimisation and Redis caching",
+        "Introduced messaging queues to decouple services and handle rate-limiting, boosting performance by ~40%",
+        "Built connector and mapping layers for IoT device integration, covering 76% of the US home automation market"
+      ],
+      "tags": ["Elasticsearch", "Redis", "Message Queues", "IoT", "APIs"]
+    },
+    {
+      "role": "Associate Software Engineer",
+      "company": "Icertis",
+      "location": "Remote — India",
+      "start": "Jul 2021",
+      "end": "Jun 2022",
+      "bullets": [
+        "Shipped contract approval and vendor e-signing with real-time status updates and immutable audit logging, cutting auditing costs by 30%",
+        "Modernised legacy product UI to Material UI standards, improving accessibility and developer velocity",
+        "Awarded Star Performer twice for delivering mission-critical features ahead of schedule"
+      ],
+      "tags": ["React", "Material UI", "Audit Logging", "Enterprise SaaS"]
+    },
+    {
+      "role": "Platform Engineer Intern",
+      "company": "Icertis",
+      "location": "Remote — India",
+      "start": "Jan 2021",
+      "end": "Jun 2021",
+      "bullets": [
+        "Optimised the product for mobile and tablet interfaces, increasing user engagement by ~20%",
+        "Built integration test suites covering full product functionality, cutting release cycles by ~15%",
+        "Redesigned the theme manager, enhancing usability and adding dark mode"
+      ],
+      "tags": ["Responsive UI", "Testing", "Theming"]
+    },
+    {
+      "role": "Machine Learning Intern",
+      "company": "Energica ASPL",
+      "location": "Chennai, India",
+      "start": "May 2019",
+      "end": "Jun 2019",
+      "bullets": [
+        "Built an ML model on historical transaction data for an Anti-Money-Laundering application, detecting fraudulent transactions in real time",
+        "Worked across data management, Power BI / Sigma dashboards, OCR research, and cloud platforms (AWS, Azure, Snowflake)"
+      ],
+      "tags": ["Machine Learning", "AML", "Power BI", "OCR"]
+    }
+  ]
+}

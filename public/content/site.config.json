@@ -1,0 +1,61 @@
+{
+  "$comment": "Master switchboard for the site — every knob you can turn without touching code. 'theme.preset' picks a palette from 'theme.presets' (add your own!). 'sections' shows/hides whole sections. 'features' toggles the command palette and hero particles.",
+  "theme": {
+    "preset": "midnight-teal",
+    "presets": {
+      "midnight-teal": {
+        "accent": "#2dd4bf",
+        "background": "#0a0e17",
+        "panel": "#0f1522",
+        "line": "#1e2b3f",
+        "headingText": "#e2e8f0",
+        "bodyText": "#94a3b8",
+        "mutedText": "#5b6b81"
+      },
+      "midnight-violet": {
+        "accent": "#a78bfa",
+        "background": "#0b0a14",
+        "panel": "#131022",
+        "line": "#2a2344",
+        "headingText": "#e9e4f5",
+        "bodyText": "#9d95b3",
+        "mutedText": "#645d7d"
+      },
+      "deep-ocean-amber": {
+        "accent": "#fbbf24",
+        "background": "#0c1220",
+        "panel": "#111a2c",
+        "line": "#223048",
+        "headingText": "#e5eaf2",
+        "bodyText": "#93a3bc",
+        "mutedText": "#5d6d87"
+      },
+      "paper-light": {
+        "accent": "#0d9488",
+        "background": "#f8fafc",
+        "panel": "#ffffff",
+        "line": "#e2e8f0",
+        "headingText": "#0f172a",
+        "bodyText": "#334155",
+        "mutedText": "#64748b"
+      }
+    }
+  },
+  "sections": {
+    "about": true,
+    "experience": true,
+    "projects": true,
+    "skills": true,
+    "writing": true,
+    "now": true,
+    "contact": true
+  },
+  "features": {
+    "commandPalette": true,
+    "particles": true
+  },
+  "meta": {
+    "title": "Yash Choudhary — Software Engineer & Business Analytics",
+    "footerNote": "Designed & built by Yash Choudhary. Content lives in JSON — no HTML was harmed in updating this site."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$comment": "The living 'Now' panel. Update this whenever life changes — takes 30 seconds.",
+  "updated": "2026-07-06",
+  "entries": [
+    {
+      "label": "Building",
+      "text": "My MSBA capstone — training transformer models on time-series data — and this website."
+    },
+    {
+      "label": "Learning",
+      "text": "Decision modelling, meta-heuristics, and how to turn models into product decisions at UCD Smurfit."
+    },
+    {
+      "label": "Exploring",
+      "text": "Dublin on foot, one coffee shop at a time."
+    }
+  ]
+}

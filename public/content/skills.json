@@ -1,0 +1,44 @@
+{
+  "groups": [
+    {
+      "label": "Languages",
+      "items": ["Python", "TypeScript", "JavaScript", "Go", "SQL", "C++"]
+    },
+    {
+      "label": "Frameworks & Libraries",
+      "items": ["Node.js", "React", "FastAPI", "LangChain", "TensorFlow", "PyTorch"]
+    },
+    {
+      "label": "Data & Platforms",
+      "items": ["PostgreSQL", "MongoDB", "Elasticsearch", "Redis", "AWS", "Power BI"]
+    },
+    {
+      "label": "Specialisms",
+      "items": ["API Design", "Auth & Security", "Microservices", "System Migrations", "Computer Vision", "Analytics"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc Business Analytics",
+      "school": "UCD Michael Smurfit Graduate Business School",
+      "location": "Dublin, Ireland",
+      "start": "Sep 2025",
+      "end": "Aug 2026",
+      "note": "1.1 expected. Core modules: Optimization in Business, Statistics, Programming for Analytics, Data Management & AI, Decision Modelling and Meta-heuristics, Technology Consulting, Big Data."
+    },
+    {
+      "degree": "B.Tech Computer Science",
+      "school": "S.R.M. University",
+      "location": "Chennai, India",
+      "start": "Jun 2017",
+      "end": "Jul 2021",
+      "note": "9.20 / 10 GPA (1.1 equivalent)."
+    }
+  ],
+  "highlights": [
+    "8th of 1800 teams — Global Wheat Detection Challenge, Kaggle",
+    "2× Star Performer Award — Icertis",
+    "Smart India Hackathon 2020 Internals Winner — AICTE India",
+    "Published: Automated Detection and Grading of Diabetic Retinopathy using CNN (2021)"
+  ]
+}
