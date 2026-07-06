@@ -1,18 +1,21 @@
 {
-  "name": "Yash Choudhary",
-  "headline": "Software Engineer · Business Analytics",
-  "tagline": "I build production systems end to end — and I'm learning to read the data they generate.",
-  "logLine": "MSc Business Analytics @ UCD Smurfit · Dublin, Ireland",
-  "summary": [
-    "Software engineer with 4.5+ years in fintech and IoT — migrating production systems to microservices, hardening auth infrastructure, and shipping integrations used across 50%+ of the US vacation rental market.",
-    "Currently pursuing an MSc in Business Analytics at UCD Michael Smurfit Graduate Business School in Dublin, bridging engineering, analytics, and product strategy. I'm most at home owning a problem from architecture to deployment — and increasingly, from data to decision."
-  ],
-  "location": "Dublin, Ireland",
-  "email": "yashc.dev@gmail.com",
-  "resumeUrl": "/Yash_Choudhary_Resume.pdf",
-  "socials": [
-    { "label": "GitHub", "url": "https://github.com/yash-choudhary" },
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/yash-here/" },
-    { "label": "Kaggle", "url": "https://www.kaggle.com/yashchoudhary" }
-  ]
+    "name": "Yash Choudhary",
+    "headline": "Senior Software Engineer",
+    "tagline": "I build production systems end to end — and I'm learning to read the data they generate.",
+    "logLine": "MSc Business Analytics @ UCD Smurfit · Dublin, Ireland",
+    "summary": [
+        "Software engineer with 4.5+ years in fintech and IoT — migrating production systems to microservices, hardening auth infrastructure, and shipping integrations used across 50%+ of the US vacation rental market.",
+        "Currently pursuing an MSc in Business Analytics at UCD Michael Smurfit Graduate Business School in Dublin, bridging engineering, analytics, and product strategy. I'm most at home owning a problem from architecture to deployment — and increasingly, from data to decision."
+    ],
+    "location": "Dublin, Ireland",
+    "email": "yashc.dev@gmail.com",
+    "resumeUrl": "/Yash_Choudhary_Resume.pdf",
+    "socials": [
+        { "label": "GitHub", "url": "https://github.com/yash-choudhary" },
+        {
+            "label": "LinkedIn",
+            "url": "https://www.linkedin.com/in/yash-here/"
+        },
+        { "label": "Kaggle", "url": "https://www.kaggle.com/yashchoudhary" }
+    ]
 }
