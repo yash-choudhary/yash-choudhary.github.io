@@ -52,7 +52,8 @@
   },
   "features": {
     "commandPalette": true,
-    "particles": true
+    "particles": true,
+    "mouseGlow": true
   },
   "meta": {
     "title": "Yash Choudhary — Software Engineer & Business Analytics",

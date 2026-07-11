@@ -31,6 +31,7 @@ export const siteConfigSchema = z
     features: z.object({
       commandPalette: z.boolean(),
       particles: z.boolean(),
+      mouseGlow: z.boolean(),
     }),
     meta: z.object({
       title: z.string(),

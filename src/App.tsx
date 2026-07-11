@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { activePalette, ContentContext, loadContent, type Content } from "./lib/content";
 import ScrollManager from "./components/ScrollManager";
 import CommandPalette from "./components/CommandPalette";
+import MouseGlow from "./components/MouseGlow";
 import Home from "./pages/Home";
 import ProjectDetail from "./pages/ProjectDetail";
 import WritingDetail from "./pages/WritingDetail";
@@ -63,6 +64,7 @@ export default function App() {
     <ContentContext.Provider value={content}>
       <BrowserRouter>
         <ScrollManager />
+        {content.config.features.mouseGlow && <MouseGlow />}
         {content.config.features.commandPalette && <CommandPalette />}
         <Routes>
           <Route path="/" element={<Home />} />
