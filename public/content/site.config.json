@@ -1,10 +1,10 @@
 {
-  "$comment": "Master switchboard. COLOUR and TYPOGRAPHY are independent: 'theme.preset' picks a palette from 'theme.presets', 'theme.style' picks a typography/surface treatment from 'theme.styles'. Add your own palette by copying any entry and changing the 8 values ('appearance' groups it in the theme picker). 'sections' shows/hides whole sections; 'features' toggles the command palette, hero particles, mouse glow and the on-page theme picker.",
+  "$comment": "Master switchboard. COLOUR and TYPOGRAPHY are independent: 'theme.preset' picks a palette from 'theme.presets', 'theme.style' picks a typography/surface treatment from 'theme.styles'. Add your own palette by copying any entry and changing the 8 values ('appearance' groups it under Dark/Light in the picker); the key is the name shown in the picker. 'sections' shows/hides whole sections; 'features' toggles the command palette, hero particles, mouse glow and the on-page theme picker.",
   "theme": {
-    "preset": "tokyo-day",
+    "preset": "parchment.harbour.blue",
     "style": "terminal",
     "presets": {
-      "tokyo-night": {
+      "blue.hour.rooftop": {
         "appearance": "dark",
         "accent": "#7aa2f7",
         "background": "#1a1b26",
@@ -14,7 +14,7 @@
         "bodyText": "#c0caf5",
         "mutedText": "#737aa2"
       },
-      "catppuccin-mocha": {
+      "plum.velvet.hush": {
         "appearance": "dark",
         "accent": "#89b4fa",
         "background": "#11111b",
@@ -24,7 +24,7 @@
         "bodyText": "#cdd6f4",
         "mutedText": "#9399b2"
       },
-      "dracula": {
+      "orchid.smoke.parlour": {
         "appearance": "dark",
         "accent": "#bd93f9",
         "background": "#282a36",
@@ -34,7 +34,7 @@
         "bodyText": "#f8f8f2",
         "mutedText": "#8a91b4"
       },
-      "nord": {
+      "arctic.fjord.watch": {
         "appearance": "dark",
         "accent": "#88c0d0",
         "background": "#2e3440",
@@ -44,7 +44,7 @@
         "bodyText": "#eceff4",
         "mutedText": "#8792a8"
       },
-      "gruvbox": {
+      "burnt.amber.workshop": {
         "appearance": "dark",
         "accent": "#d79921",
         "background": "#282828",
@@ -54,7 +54,7 @@
         "bodyText": "#ebdbb2",
         "mutedText": "#a89984"
       },
-      "one-dark": {
+      "steel.blue.signal": {
         "appearance": "dark",
         "accent": "#61afef",
         "background": "#282c34",
@@ -64,7 +64,7 @@
         "bodyText": "#abb2bf",
         "mutedText": "#7f848e"
       },
-      "solarized": {
+      "deep.harbour.lamp": {
         "appearance": "dark",
         "accent": "#268bd2",
         "background": "#002b36",
@@ -74,7 +74,7 @@
         "bodyText": "#93a1a1",
         "mutedText": "#839496"
       },
-      "kanagawa": {
+      "ink.stone.tide": {
         "appearance": "dark",
         "accent": "#7e9cd8",
         "background": "#1f1f28",
@@ -84,7 +84,7 @@
         "bodyText": "#dcd7ba",
         "mutedText": "#8f8d80"
       },
-      "rose-pine": {
+      "dried.rose.eve": {
         "appearance": "dark",
         "accent": "#c4a7e7",
         "background": "#191724",
@@ -94,7 +94,7 @@
         "bodyText": "#e0def4",
         "mutedText": "#908caa"
       },
-      "vesper": {
+      "candle.on.charcoal": {
         "appearance": "dark",
         "accent": "#ffc799",
         "background": "#101010",
@@ -104,7 +104,7 @@
         "bodyText": "#ffffff",
         "mutedText": "#7e7e7e"
       },
-      "terminal": {
+      "cold.cathode.black": {
         "appearance": "dark",
         "accent": "#4a9eff",
         "background": "#000000",
@@ -114,7 +114,7 @@
         "bodyText": "#d8d8d8",
         "mutedText": "#888888"
       },
-      "tokyo-day": {
+      "paper.blue.morning": {
         "appearance": "light",
         "accent": "#2e7de9",
         "background": "#e1e2e7",
@@ -124,7 +124,7 @@
         "bodyText": "#3760bf",
         "mutedText": "#68709a"
       },
-      "catppuccin-latte": {
+      "cloud.cobalt.day": {
         "appearance": "light",
         "accent": "#1e66f5",
         "background": "#eff1f5",
@@ -134,7 +134,7 @@
         "bodyText": "#4c4f69",
         "mutedText": "#6c6f85"
       },
-      "gruvbox-light": {
+      "warm.linen.teal": {
         "appearance": "light",
         "accent": "#076678",
         "background": "#fbf1c7",
@@ -144,7 +144,7 @@
         "bodyText": "#3c3836",
         "mutedText": "#665c54"
       },
-      "one-light": {
+      "clean.slate.noon": {
         "appearance": "light",
         "accent": "#4078f2",
         "background": "#fafafa",
@@ -154,7 +154,7 @@
         "bodyText": "#383a42",
         "mutedText": "#686b77"
       },
-      "solarized-light": {
+      "parchment.harbour.blue": {
         "appearance": "light",
         "accent": "#268bd2",
         "background": "#fdf6e3",
@@ -164,7 +164,7 @@
         "bodyText": "#657b83",
         "mutedText": "#586e75"
       },
-      "kanagawa-lotus": {
+      "pale.wheat.indigo": {
         "appearance": "light",
         "accent": "#4d699b",
         "background": "#f2ecbc",
@@ -174,7 +174,7 @@
         "bodyText": "#545464",
         "mutedText": "#77736a"
       },
-      "rose-pine-dawn": {
+      "blush.dawn.mist": {
         "appearance": "light",
         "accent": "#907aa9",
         "background": "#faf4ed",
@@ -184,7 +184,7 @@
         "bodyText": "#464261",
         "mutedText": "#797593"
       },
-      "midnight-teal": {
+      "abyss.teal.glow": {
         "appearance": "dark",
         "accent": "#2dd4bf",
         "background": "#0a0e17",
@@ -194,7 +194,7 @@
         "bodyText": "#94a3b8",
         "mutedText": "#5b6b81"
       },
-      "midnight-violet": {
+      "void.violet.bloom": {
         "appearance": "dark",
         "accent": "#a78bfa",
         "background": "#0b0a14",
@@ -204,7 +204,7 @@
         "bodyText": "#9d95b3",
         "mutedText": "#645d7d"
       },
-      "deep-ocean-amber": {
+      "amber.buoy.deep": {
         "appearance": "dark",
         "accent": "#fbbf24",
         "background": "#0c1220",
@@ -214,7 +214,7 @@
         "bodyText": "#93a3bc",
         "mutedText": "#5d6d87"
       },
-      "paper-light": {
+      "cold.paper.jade": {
         "appearance": "light",
         "accent": "#0d9488",
         "background": "#f8fafc",

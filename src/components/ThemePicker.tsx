@@ -1,12 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import {
-  activePalette,
-  groupedPresets,
-  themeLabel,
-  useContent,
-  useTheme,
-} from "../lib/content";
+import { activePalette, groupedPresets, useContent, useTheme } from "../lib/content";
 
 /** Three-dot preview of a palette: background, accent, heading ink. */
 function Swatch({ preset }: { preset: string }) {
@@ -97,7 +91,7 @@ export default function ThemePicker() {
           }`}
         >
           <Swatch preset={preset} />
-          <span className="grow truncate">{themeLabel(preset)}</span>
+          <span className="grow truncate">{preset}</span>
           {preset === theme.preset && <span aria-hidden>✓</span>}
         </button>
       ))}
@@ -109,7 +103,7 @@ export default function ThemePicker() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="surface mb-2 w-60 overflow-hidden shadow-2xl"
+            className="surface mb-2 w-72 overflow-hidden shadow-2xl"
             initial={{ opacity: 0, y: 8, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 8, scale: 0.98 }}
@@ -153,7 +147,7 @@ export default function ThemePicker() {
         className="surface flex items-center gap-2 px-2.5 py-1.5 font-mono text-[11px] text-body shadow-lg transition-colors hover:text-accent"
       >
         <Swatch preset={theme.preset} />
-        <span className="max-w-[10rem] truncate">{themeLabel(theme.preset)}</span>
+        <span className="max-w-[13rem] truncate">{theme.preset}</span>
         <span className="text-muted">[t]</span>
       </button>
     </div>

@@ -74,11 +74,6 @@ export function activeStyle(config: SiteConfig, style?: string): Style {
   return config.theme.styles[style ?? config.theme.style];
 }
 
-/** Turns a preset key like "rose-pine-dawn" into "rose pine dawn" for display. */
-export function themeLabel(key: string): string {
-  return key.replace(/-/g, " ");
-}
-
 /** Preset keys grouped for the theme picker, dark first. */
 export function groupedPresets(config: SiteConfig): {
   dark: string[];

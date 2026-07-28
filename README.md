@@ -34,18 +34,21 @@ with any style:
 ```
 
 - **`preset`** picks a colour palette from `theme.presets` — **22 ship by
-  default**: the classic editor schemes (tokyo night/day, catppuccin mocha &
-  latte, dracula, nord, gruvbox ± light, one dark/light, solarized ± light,
-  kanagawa & lotus, rose pine & dawn, vesper, pure terminal) plus the four
-  originals (midnight teal/violet, deep ocean amber, paper light).
+  default**, each named for the mood of its own colours:
+
+  | Dark | Light |
+  |---|---|
+  | `blue.hour.rooftop` · `plum.velvet.hush` · `orchid.smoke.parlour` · `arctic.fjord.watch` · `burnt.amber.workshop` · `steel.blue.signal` · `deep.harbour.lamp` · `ink.stone.tide` · `dried.rose.eve` · `candle.on.charcoal` · `cold.cathode.black` · `abyss.teal.glow` · `void.violet.bloom` · `amber.buoy.deep` | `parchment.harbour.blue` (default) · `paper.blue.morning` · `cloud.cobalt.day` · `warm.linen.teal` · `clean.slate.noon` · `pale.wheat.indigo` · `blush.dawn.mist` · `cold.paper.jade` |
 - **`style`** picks a typography/surface treatment from `theme.styles`:
   `terminal` (monospace headings at regular weight, tight tracking, hairline
   borders, small radii) or `modern` (bold sans headings, rounder surfaces).
 
 **Adding a theme** — copy any entry in `theme.presets` and change the values:
 
+The key is the name shown in the picker, so pick something evocative:
+
 ```json
-"my-theme": {
+"rust.harbour.dusk": {
   "appearance": "dark",      // groups it under Dark / Light in the picker
   "accent": "#ff8800",
   "background": "#101014",
