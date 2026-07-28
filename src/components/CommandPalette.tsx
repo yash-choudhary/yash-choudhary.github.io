@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { useContent } from "../lib/content";
+import { useContent, useTheme } from "../lib/content";
 
 interface Action {
   id: string;
@@ -12,6 +12,7 @@ interface Action {
 
 export default function CommandPalette() {
   const { config, profile } = useContent();
+  const theme = useTheme();
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
@@ -61,8 +62,20 @@ export default function CommandPalette() {
         hint: "link ↗",
         run: () => window.open(s.url, "_blank"),
       })),
+      ...Object.keys(config.theme.presets).map((name) => ({
+        id: `theme-${name}`,
+        label: `Theme: ${name}`,
+        hint: name === theme.preset ? "active" : "palette",
+        run: () => theme.setPreset(name),
+      })),
+      ...Object.keys(config.theme.styles).map((name) => ({
+        id: `style-${name}`,
+        label: `Style: ${name}`,
+        hint: name === theme.style ? "active" : "typography",
+        run: () => theme.setStyle(name),
+      })),
     ];
-  }, [config, profile, navigate]);
+  }, [config, profile, navigate, theme]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -106,7 +119,13 @@ export default function CommandPalette() {
 
   const runAction = (action: Action) => {
     action.run();
-    if (action.id !== "email") setOpen(false);
+    // Keep the palette open for actions you'd want to repeat — copying the
+    // email, or flipping through themes to compare them.
+    const staysOpen =
+      action.id === "email" ||
+      action.id.startsWith("theme-") ||
+      action.id.startsWith("style-");
+    if (!staysOpen) setOpen(false);
   };
 
   const onInputKey = (e: React.KeyboardEvent) => {
@@ -133,7 +152,7 @@ export default function CommandPalette() {
           onClick={() => setOpen(false)}
         >
           <motion.div
-            className="w-full max-w-lg overflow-hidden rounded-lg border border-line bg-panel shadow-2xl"
+            className="surface w-full max-w-lg overflow-hidden shadow-2xl"
             initial={{ scale: 0.97, y: -8 }}
             animate={{ scale: 1, y: 0 }}
             exit={{ scale: 0.97, y: -8 }}
@@ -153,7 +172,7 @@ export default function CommandPalette() {
                 placeholder="Type a command…"
                 className="w-full bg-transparent py-3.5 font-mono text-sm text-ink outline-none placeholder:text-muted"
               />
-              <kbd className="rounded border border-line px-1.5 py-0.5 font-mono text-[10px] text-muted">
+              <kbd className="rounded-chip border border-line px-1.5 py-0.5 font-mono text-[10px] text-muted">
                 esc
               </kbd>
             </div>

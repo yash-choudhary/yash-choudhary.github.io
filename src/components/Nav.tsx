@@ -36,7 +36,7 @@ export default function Nav() {
             href={profile.resumeUrl}
             target="_blank"
             rel="noreferrer"
-            className="rounded border border-accent/60 px-3 py-1.5 font-mono text-xs text-accent transition-colors hover:bg-accent/10"
+            className="rounded-theme border border-accent/60 px-3 py-1.5 font-mono text-xs text-accent transition-colors hover:bg-accent/10"
           >
             Resume
           </a>
@@ -44,7 +44,7 @@ export default function Nav() {
             <button
               type="button"
               onClick={() => window.dispatchEvent(new CustomEvent("open-command-palette"))}
-              className="hidden rounded border border-line px-2 py-1.5 font-mono text-xs text-muted transition-colors hover:border-accent/60 hover:text-accent sm:block"
+              className="rounded-theme hidden border border-line px-2 py-1.5 font-mono text-xs text-muted transition-colors hover:border-accent/60 hover:text-accent sm:block"
               aria-label="Open command palette"
             >
               ⌘K

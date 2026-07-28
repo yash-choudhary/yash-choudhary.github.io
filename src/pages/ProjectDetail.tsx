@@ -26,11 +26,9 @@ export default function ProjectDetail() {
           <p className="font-mono text-[11px] uppercase tracking-wider text-accent">
             {project.kicker}
           </p>
-          <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-ink md:text-4xl">
-            {project.title}
-          </h1>
+          <h1 className="heading mt-2 text-3xl text-ink md:text-4xl">{project.title}</h1>
           <div className="mt-4 flex flex-wrap items-center gap-3">
-            <span className="rounded bg-accent/10 px-2.5 py-1 font-mono text-xs text-accent">
+            <span className="rounded-chip bg-accent/10 px-2.5 py-1 font-mono text-xs text-accent">
               {project.metric}
             </span>
             {project.links.map((link) => (

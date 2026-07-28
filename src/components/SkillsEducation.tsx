@@ -17,7 +17,7 @@ export default function SkillsEducation({ index }: { index: number }) {
                 {group.items.map((skill) => (
                   <span
                     key={skill}
-                    className="rounded border border-line bg-panel px-3 py-1.5 font-mono text-xs text-body transition-colors hover:border-accent/50 hover:text-accent"
+                    className="rounded-chip border border-line bg-panel px-3 py-1.5 font-mono text-xs text-body transition-colors hover:border-accent/50 hover:text-accent"
                   >
                     {skill}
                   </span>
@@ -30,10 +30,10 @@ export default function SkillsEducation({ index }: { index: number }) {
           {skills.education.map((edu) => (
             <div
               key={edu.degree}
-              className="rounded-lg border border-line bg-panel p-5"
+              className="surface p-5"
             >
               <div className="flex items-baseline justify-between gap-4">
-                <h3 className="font-semibold text-ink">{edu.degree}</h3>
+                <h3 className="heading text-ink">{edu.degree}</h3>
                 <p className="shrink-0 font-mono text-[11px] text-muted">
                   {edu.start} — {edu.end}
                 </p>
@@ -43,7 +43,7 @@ export default function SkillsEducation({ index }: { index: number }) {
               <p className="mt-3 text-sm leading-relaxed">{edu.note}</p>
             </div>
           ))}
-          <div className="rounded-lg border border-line bg-panel p-5">
+          <div className="surface p-5">
             <h3 className="mb-3 font-mono text-xs uppercase tracking-wider text-muted">
               Highlights
             </h3>

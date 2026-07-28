@@ -13,11 +13,26 @@ export const paletteSchema = z.object({
   mutedText: z.string(),
 });
 
+/**
+ * Typography & surface treatment, kept independent of colour so any style can
+ * be paired with any palette.
+ */
+export const styleSchema = z.object({
+  headingFont: z.enum(["sans", "mono"]),
+  headingWeight: z.string(),
+  headingTracking: z.string(),
+  bodyFont: z.enum(["sans", "mono"]),
+  radius: z.string(),
+  chipRadius: z.string(),
+});
+
 export const siteConfigSchema = z
   .object({
     theme: z.object({
       preset: z.string(),
+      style: z.string(),
       presets: z.record(z.string(), paletteSchema),
+      styles: z.record(z.string(), styleSchema),
     }),
     sections: z.object({
       about: z.boolean(),
@@ -40,12 +55,40 @@ export const siteConfigSchema = z
   })
   .refine((config) => config.theme.preset in config.theme.presets, {
     message: "theme.preset must be one of the keys in theme.presets",
+  })
+  .refine((config) => config.theme.style in config.theme.styles, {
+    message: "theme.style must be one of the keys in theme.styles",
   });
 
 export type Palette = z.infer<typeof paletteSchema>;
+export type Style = z.infer<typeof styleSchema>;
 
-export function activePalette(config: SiteConfig): Palette {
-  return config.theme.presets[config.theme.preset];
+export function activePalette(config: SiteConfig, preset?: string): Palette {
+  return config.theme.presets[preset ?? config.theme.preset];
+}
+
+export function activeStyle(config: SiteConfig, style?: string): Style {
+  return config.theme.styles[style ?? config.theme.style];
+}
+
+/** Maps a resolved palette + style onto the CSS custom properties in index.css. */
+export function themeVariables(palette: Palette, style: Style): Record<string, string> {
+  const fonts = { sans: "var(--font-stack-sans)", mono: "var(--font-stack-mono)" };
+  return {
+    "--accent": palette.accent,
+    "--bg": palette.background,
+    "--panel": palette.panel,
+    "--line": palette.line,
+    "--ink": palette.headingText,
+    "--body": palette.bodyText,
+    "--muted": palette.mutedText,
+    "--heading-font": fonts[style.headingFont],
+    "--heading-weight": style.headingWeight,
+    "--heading-tracking": style.headingTracking,
+    "--body-font": fonts[style.bodyFont],
+    "--radius": style.radius,
+    "--chip-radius": style.chipRadius,
+  };
 }
 
 export const profileSchema = z.object({
@@ -182,4 +225,19 @@ export function useContent(): Content {
   const content = useContext(ContentContext);
   if (!content) throw new Error("useContent called outside ContentContext");
   return content;
+}
+
+export interface ThemeState {
+  preset: string;
+  style: string;
+  setPreset: (preset: string) => void;
+  setStyle: (style: string) => void;
+}
+
+export const ThemeContext = createContext<ThemeState | null>(null);
+
+export function useTheme(): ThemeState {
+  const theme = useContext(ThemeContext);
+  if (!theme) throw new Error("useTheme called outside ThemeContext");
+  return theme;
 }

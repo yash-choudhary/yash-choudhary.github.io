@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+  --font-sans: var(--body-font);
+  --font-mono: var(--font-stack-mono);
 
   --color-bg: var(--bg);
   --color-panel: var(--panel);
@@ -14,15 +14,47 @@
 }
 
 :root {
-  /* Defaults for the first paint; overridden at runtime by the active
-     theme preset in public/content/site.config.json. */
-  --accent: #2dd4bf;
-  --bg: #0a0e17;
-  --panel: #0f1522;
-  --line: #1e2b3f;
-  --ink: #e2e8f0;
-  --body: #94a3b8;
-  --muted: #5b6b81;
+  --font-stack-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-stack-mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+
+  /* Defaults for the first paint; overridden at runtime by the active theme
+     preset + style in public/content/site.config.json. */
+  --accent: #2e7de9;
+  --bg: #e1e2e7;
+  --panel: #d8d9e0;
+  --line: #b6bbd1;
+  --ink: #1f2f66;
+  --body: #3760bf;
+  --muted: #68709a;
+
+  --heading-font: var(--font-stack-mono);
+  --heading-weight: 400;
+  --heading-tracking: -0.04em;
+  --body-font: var(--font-stack-sans);
+  --radius: 6px;
+  --chip-radius: 2px;
+}
+
+/* Headings take their family, weight and tracking from the active style, so a
+   single config switch restyles the whole site's typography. */
+.heading {
+  font-family: var(--heading-font);
+  font-weight: var(--heading-weight);
+  letter-spacing: var(--heading-tracking);
+}
+
+.surface {
+  border: 1px solid var(--line);
+  background-color: var(--panel);
+  border-radius: var(--radius);
+}
+
+.rounded-theme {
+  border-radius: var(--radius);
+}
+
+.rounded-chip {
+  border-radius: var(--chip-radius);
 }
 
 html {
@@ -59,8 +91,9 @@ body {
 }
 .prose h1, .prose h2, .prose h3 {
   color: var(--color-ink);
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-family: var(--heading-font);
+  font-weight: var(--heading-weight);
+  letter-spacing: var(--heading-tracking);
   margin: 1.75em 0 0.6em;
 }
 .prose h1 { font-size: 1.9rem; margin-top: 0; }
@@ -79,17 +112,17 @@ body {
   text-underline-offset: 3px;
 }
 .prose code {
-  font-family: var(--font-mono);
+  font-family: var(--font-stack-mono);
   font-size: 0.85em;
   background: var(--color-panel);
   border: 1px solid var(--color-line);
-  border-radius: 4px;
+  border-radius: var(--chip-radius);
   padding: 0.15em 0.4em;
 }
 .prose pre {
   background: var(--color-panel);
   border: 1px solid var(--color-line);
-  border-radius: 8px;
+  border-radius: var(--radius);
   padding: 1em 1.25em;
   overflow-x: auto;
   margin: 1.2em 0;

@@ -6,7 +6,7 @@ export default function NowPanel({ index }: { index: number }) {
 
   return (
     <Section id="now" index={index} title="Now">
-      <div className="rounded-lg border border-line bg-panel p-6 md:p-8">
+      <div className="surface p-6 md:p-8">
         <p className="mb-6 font-mono text-xs text-muted">
           <span className="text-accent">$</span> cat now.json{" "}
           <span className="float-right">last updated: {now.updated}</span>

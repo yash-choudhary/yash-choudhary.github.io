@@ -13,7 +13,7 @@ export default function Contact({ index }: { index: number }) {
         </p>
         <a
           href={`mailto:${profile.email}`}
-          className="mt-8 inline-block rounded border border-accent px-7 py-3.5 font-mono text-sm text-accent transition-colors hover:bg-accent/10"
+          className="rounded-theme mt-8 inline-block border border-accent px-7 py-3.5 font-mono text-sm text-accent transition-colors hover:bg-accent/10"
         >
           {profile.email}
         </a>

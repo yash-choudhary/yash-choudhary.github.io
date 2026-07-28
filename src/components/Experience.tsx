@@ -16,7 +16,7 @@ export default function Experience({ index }: { index: number }) {
               {job.start} — {job.end}
             </p>
             <div>
-              <h3 className="font-semibold text-ink">
+              <h3 className="heading text-ink">
                 {job.role} <span className="text-muted">·</span>{" "}
                 <span className="text-accent">{job.company}</span>
               </h3>
@@ -35,7 +35,7 @@ export default function Experience({ index }: { index: number }) {
                 {job.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full bg-accent/10 px-3 py-1 font-mono text-[11px] text-accent"
+                    className="rounded-chip bg-accent/10 px-3 py-1 font-mono text-[11px] text-accent"
                   >
                     {tag}
                   </span>

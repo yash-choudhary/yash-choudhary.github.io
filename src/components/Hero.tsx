@@ -18,10 +18,8 @@ export default function Hero() {
           <p className="cursor-blink mb-5 font-mono text-sm text-accent">
             &gt; {profile.logLine}
           </p>
-          <h1 className="text-5xl font-extrabold tracking-tight text-ink md:text-7xl">
-            {profile.name}
-          </h1>
-          <h2 className="mt-3 text-2xl font-bold tracking-tight text-muted md:text-4xl">
+          <h1 className="heading text-5xl text-ink md:text-7xl">{profile.name}</h1>
+          <h2 className="heading mt-3 text-2xl text-muted md:text-4xl">
             {profile.headline}
           </h2>
           <p className="mt-6 max-w-xl text-lg leading-relaxed">{profile.tagline}</p>
@@ -30,13 +28,13 @@ export default function Hero() {
               href={profile.resumeUrl}
               target="_blank"
               rel="noreferrer"
-              className="rounded bg-accent px-5 py-2.5 font-mono text-sm font-medium text-bg transition-opacity hover:opacity-85"
+              className="rounded-theme bg-accent px-5 py-2.5 font-mono text-sm font-medium text-bg transition-opacity hover:opacity-85"
             >
               View Resume
             </a>
             <a
               href={`mailto:${profile.email}`}
-              className="rounded border border-line px-5 py-2.5 font-mono text-sm text-ink transition-colors hover:border-accent hover:text-accent"
+              className="rounded-theme border border-line px-5 py-2.5 font-mono text-sm text-ink transition-colors hover:border-accent hover:text-accent"
             >
               Get in touch
             </a>

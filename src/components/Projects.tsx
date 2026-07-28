@@ -4,16 +4,16 @@ import Section from "./Section";
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="group flex flex-col rounded-lg border border-line bg-panel p-6 transition-colors hover:border-accent/50">
+    <article className="surface group flex flex-col p-6 transition-colors hover:border-accent/50">
       <div className="flex items-start justify-between gap-4">
         <p className="font-mono text-[11px] uppercase tracking-wider text-accent">
           {project.kicker}
         </p>
-        <p className="shrink-0 rounded bg-accent/10 px-2 py-0.5 font-mono text-[11px] text-accent">
+        <p className="rounded-chip shrink-0 bg-accent/10 px-2 py-0.5 font-mono text-[11px] text-accent">
           {project.metric}
         </p>
       </div>
-      <h3 className="mt-3 text-lg font-semibold text-ink">{project.title}</h3>
+      <h3 className="heading mt-3 text-lg text-ink">{project.title}</h3>
       <p className="mt-2 grow text-[15px] leading-relaxed">{project.summary}</p>
       <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1 font-mono text-[11px] text-muted">
         {project.tags.map((tag) => (

@@ -18,7 +18,7 @@ export default function Section({ id, index, title, children }: SectionProps) {
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <h2 className="mb-8 flex items-baseline gap-3 text-2xl font-bold tracking-tight text-ink">
+      <h2 className="heading mb-8 flex items-baseline gap-3 text-2xl text-ink">
         <span className="font-mono text-sm font-medium text-accent">
           {String(index).padStart(2, "0")} ·
         </span>

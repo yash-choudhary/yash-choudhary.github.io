@@ -24,17 +24,28 @@ Hide any section from the public site in `site.config.json`:
 "sections": { "writing": false, ... }
 ```
 
-Change the whole site's look with one line — pick any preset defined in
-`theme.presets` (ships with `midnight-teal`, `midnight-violet`,
-`deep-ocean-amber`, and `paper-light`):
+### Theming
+
+Colour and typography are **two independent switches**, so any palette works
+with any style:
 
 ```json
-"theme": { "preset": "midnight-violet", ... }
+"theme": { "preset": "tokyo-day", "style": "terminal", ... }
 ```
 
-Or define your own preset: add an entry to `theme.presets` with the seven
-palette colors (`accent`, `background`, `panel`, `line`, `headingText`,
-`bodyText`, `mutedText`) and point `preset` at it.
+- **`preset`** picks a colour palette from `theme.presets` — ships with
+  `tokyo-day`, `tokyo-night`, `midnight-teal`, `midnight-violet`,
+  `deep-ocean-amber`, and `paper-light`. Add your own by defining the seven
+  colours (`accent`, `background`, `panel`, `line`, `headingText`, `bodyText`,
+  `mutedText`).
+- **`style`** picks a typography/surface treatment from `theme.styles`:
+  `terminal` (monospace headings at regular weight, tight tracking, hairline
+  borders, small radii) or `modern` (bold sans headings, rounder surfaces).
+
+To try combinations without editing JSON, open the command palette (`⌘K`) and
+run the **Theme:** / **Style:** commands — they apply instantly and stay open so
+you can flip through. Those previews last for the session only; whatever is in
+`site.config.json` is what visitors get.
 
 The JSON is validated with Zod on load — a typo shows a clear error screen in
 dev instead of silently rendering a broken page.

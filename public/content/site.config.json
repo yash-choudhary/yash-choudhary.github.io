@@ -1,8 +1,27 @@
 {
-  "$comment": "Master switchboard for the site — every knob you can turn without touching code. 'theme.preset' picks a palette from 'theme.presets' (add your own!). 'sections' shows/hides whole sections. 'features' toggles the command palette and hero particles.",
+  "$comment": "Master switchboard — every knob you can turn without touching code. COLOUR and TYPOGRAPHY are independent: 'theme.preset' picks a palette from 'theme.presets', 'theme.style' picks a typography/surface treatment from 'theme.styles'. Any palette works with any style. 'sections' shows/hides whole sections; 'features' toggles the command palette and hero particles.",
   "theme": {
-    "preset": "midnight-teal",
+    "preset": "tokyo-day",
+    "style": "terminal",
     "presets": {
+      "tokyo-day": {
+        "accent": "#2e7de9",
+        "background": "#e1e2e7",
+        "panel": "#d8d9e0",
+        "line": "#b6bbd1",
+        "headingText": "#1f2f66",
+        "bodyText": "#3760bf",
+        "mutedText": "#68709a"
+      },
+      "tokyo-night": {
+        "accent": "#7aa2f7",
+        "background": "#1a1b26",
+        "panel": "#202331",
+        "line": "#2f3549",
+        "headingText": "#d5dcff",
+        "bodyText": "#c0caf5",
+        "mutedText": "#737aa2"
+      },
       "midnight-teal": {
         "accent": "#2dd4bf",
         "background": "#0a0e17",
@@ -39,6 +58,26 @@
         "bodyText": "#334155",
         "mutedText": "#64748b"
       }
+    },
+    "styles": {
+      "terminal": {
+        "$comment": "Monospace headings at regular weight with tight tracking, hairline borders, small radii.",
+        "headingFont": "mono",
+        "headingWeight": "400",
+        "headingTracking": "-0.04em",
+        "bodyFont": "sans",
+        "radius": "6px",
+        "chipRadius": "2px"
+      },
+      "modern": {
+        "$comment": "Bold sans headings, softer rounded surfaces.",
+        "headingFont": "sans",
+        "headingWeight": "800",
+        "headingTracking": "-0.025em",
+        "bodyFont": "sans",
+        "radius": "10px",
+        "chipRadius": "9999px"
+      }
     }
   },
   "sections": {
@@ -56,7 +95,7 @@
     "mouseGlow": true
   },
   "meta": {
-    "title": "Yash Choudhary — Software Engineer & Business Analytics",
+    "title": "Yash Choudhary — Senior Software Engineer",
     "footerNote": "Designed & built by Yash Choudhary. Content lives in JSON — no HTML was harmed in updating this site."
   }
 }
