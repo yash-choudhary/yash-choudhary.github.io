@@ -62,18 +62,23 @@ export default function CommandPalette() {
         hint: "link ↗",
         run: () => window.open(s.url, "_blank"),
       })),
-      ...Object.keys(config.theme.presets).map((name) => ({
-        id: `theme-${name}`,
-        label: `Theme: ${name}`,
-        hint: name === theme.preset ? "active" : "palette",
-        run: () => theme.setPreset(name),
-      })),
-      ...Object.keys(config.theme.styles).map((name) => ({
-        id: `style-${name}`,
-        label: `Style: ${name}`,
-        hint: name === theme.style ? "active" : "typography",
-        run: () => theme.setStyle(name),
-      })),
+      // Themes live in the picker rather than here — 20+ entries would bury
+      // everything else in this list.
+      ...(config.features.themePicker
+        ? [
+            {
+              id: "open-theme-picker",
+              label: "Change theme…",
+              hint: theme.preset,
+              run: () => window.dispatchEvent(new CustomEvent("open-theme-picker")),
+            },
+          ]
+        : Object.keys(config.theme.presets).map((name) => ({
+            id: `theme-${name}`,
+            label: `Theme: ${name}`,
+            hint: name === theme.preset ? "active" : "palette",
+            run: () => theme.setPreset(name),
+          }))),
     ];
   }, [config, profile, navigate, theme]);
 
@@ -125,6 +130,10 @@ export default function CommandPalette() {
       action.id === "email" ||
       action.id.startsWith("theme-") ||
       action.id.startsWith("style-");
+    if (action.id === "open-theme-picker") {
+      setOpen(false);
+      return;
+    }
     if (!staysOpen) setOpen(false);
   };
 

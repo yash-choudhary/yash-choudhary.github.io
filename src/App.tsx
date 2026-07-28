@@ -11,18 +11,38 @@ import {
 } from "./lib/content";
 import ScrollManager from "./components/ScrollManager";
 import CommandPalette from "./components/CommandPalette";
+import ThemePicker from "./components/ThemePicker";
 import Home from "./pages/Home";
 import ProjectDetail from "./pages/ProjectDetail";
 import WritingDetail from "./pages/WritingDetail";
 import NotFound from "./pages/NotFound";
 
+const STORAGE_PREFIX = "yc-theme-";
+
+function readStored(key: "preset" | "style"): string | null {
+  try {
+    return localStorage.getItem(STORAGE_PREFIX + key);
+  } catch {
+    // Private browsing or blocked storage — fall back to the config default.
+    return null;
+  }
+}
+
+function writeStored(key: "preset" | "style", value: string) {
+  try {
+    localStorage.setItem(STORAGE_PREFIX + key, value);
+  } catch {
+    /* ignore */
+  }
+}
+
 export default function App() {
   const [content, setContent] = useState<Content | null>(null);
   const [error, setError] = useState<string | null>(null);
-  // Session-only overrides so themes can be previewed from the command
-  // palette; site.config.json remains the source of truth on reload.
-  const [preset, setPreset] = useState<string | null>(null);
-  const [style, setStyle] = useState<string | null>(null);
+  // A visitor's own theme choice, remembered across visits. Until they pick
+  // one, site.config.json decides what they see.
+  const [preset, setPreset] = useState<string | null>(() => readStored("preset"));
+  const [style, setStyle] = useState<string | null>(() => readStored("style"));
 
   useEffect(() => {
     loadContent()
@@ -30,26 +50,39 @@ export default function App() {
       .catch((e: unknown) => setError(e instanceof Error ? e.message : String(e)));
   }, []);
 
+  // A stored choice can go stale if a preset is renamed or removed from the
+  // config, so only honour it while it still exists.
+  const resolvedPreset =
+    content && preset && preset in content.config.theme.presets ? preset : undefined;
+  const resolvedStyle =
+    content && style && style in content.config.theme.styles ? style : undefined;
+
   useEffect(() => {
     if (!content) return;
     const vars = themeVariables(
-      activePalette(content.config, preset ?? undefined),
-      activeStyle(content.config, style ?? undefined),
+      activePalette(content.config, resolvedPreset),
+      activeStyle(content.config, resolvedStyle),
     );
     for (const [name, value] of Object.entries(vars)) {
       document.documentElement.style.setProperty(name, value);
     }
     document.title = content.config.meta.title;
-  }, [content, preset, style]);
+  }, [content, resolvedPreset, resolvedStyle]);
 
   const theme = useMemo(
     () => ({
-      preset: preset ?? content?.config.theme.preset ?? "",
-      style: style ?? content?.config.theme.style ?? "",
-      setPreset,
-      setStyle,
+      preset: resolvedPreset ?? content?.config.theme.preset ?? "",
+      style: resolvedStyle ?? content?.config.theme.style ?? "",
+      setPreset: (next: string) => {
+        setPreset(next);
+        writeStored("preset", next);
+      },
+      setStyle: (next: string) => {
+        setStyle(next);
+        writeStored("style", next);
+      },
     }),
-    [preset, style, content],
+    [resolvedPreset, resolvedStyle, content],
   );
 
   if (error) {
@@ -81,6 +114,7 @@ export default function App() {
         <BrowserRouter>
           <ScrollManager />
           {content.config.features.commandPalette && <CommandPalette />}
+          {content.config.features.themePicker && <ThemePicker />}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects/:slug" element={<ProjectDetail />} />

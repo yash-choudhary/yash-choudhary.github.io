@@ -33,19 +33,39 @@ with any style:
 "theme": { "preset": "tokyo-day", "style": "terminal", ... }
 ```
 
-- **`preset`** picks a colour palette from `theme.presets` — ships with
-  `tokyo-day`, `tokyo-night`, `midnight-teal`, `midnight-violet`,
-  `deep-ocean-amber`, and `paper-light`. Add your own by defining the seven
-  colours (`accent`, `background`, `panel`, `line`, `headingText`, `bodyText`,
-  `mutedText`).
+- **`preset`** picks a colour palette from `theme.presets` — **22 ship by
+  default**: the classic editor schemes (tokyo night/day, catppuccin mocha &
+  latte, dracula, nord, gruvbox ± light, one dark/light, solarized ± light,
+  kanagawa & lotus, rose pine & dawn, vesper, pure terminal) plus the four
+  originals (midnight teal/violet, deep ocean amber, paper light).
 - **`style`** picks a typography/surface treatment from `theme.styles`:
   `terminal` (monospace headings at regular weight, tight tracking, hairline
   borders, small radii) or `modern` (bold sans headings, rounder surfaces).
 
-To try combinations without editing JSON, open the command palette (`⌘K`) and
-run the **Theme:** / **Style:** commands — they apply instantly and stay open so
-you can flip through. Those previews last for the session only; whatever is in
-`site.config.json` is what visitors get.
+**Adding a theme** — copy any entry in `theme.presets` and change the values:
+
+```json
+"my-theme": {
+  "appearance": "dark",      // groups it under Dark / Light in the picker
+  "accent": "#ff8800",
+  "background": "#101014",
+  "panel": "#17171d",
+  "line": "#2a2a33",
+  "headingText": "#f2f2f7",
+  "bodyText": "#c7c7d1",
+  "mutedText": "#7b7b8a"
+}
+```
+
+It appears in the picker immediately — no code changes.
+
+**The theme picker** is the pill in the bottom-left corner. Click it or press
+`t`, then click a theme or use `↑`/`↓` to preview each one live; `esc` closes.
+The bottom row switches the typography style. A visitor's choice is remembered
+in `localStorage`, so it survives reloads; until they pick one, they see
+whatever `site.config.json` specifies. Turn the whole thing off with
+`"features": { "themePicker": false }` — theme commands then move back into the
+command palette.
 
 The JSON is validated with Zod on load — a typo shows a clear error screen in
 dev instead of silently rendering a broken page.

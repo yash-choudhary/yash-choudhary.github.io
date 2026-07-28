@@ -4,6 +4,8 @@ import { z } from "zod";
 const linkSchema = z.object({ label: z.string(), url: z.string() });
 
 export const paletteSchema = z.object({
+  /** Groups the theme picker into Dark / Light sections. */
+  appearance: z.enum(["dark", "light"]),
   accent: z.string(),
   background: z.string(),
   panel: z.string(),
@@ -47,6 +49,7 @@ export const siteConfigSchema = z
       commandPalette: z.boolean(),
       particles: z.boolean(),
       mouseGlow: z.boolean(),
+      themePicker: z.boolean(),
     }),
     meta: z.object({
       title: z.string(),
@@ -69,6 +72,23 @@ export function activePalette(config: SiteConfig, preset?: string): Palette {
 
 export function activeStyle(config: SiteConfig, style?: string): Style {
   return config.theme.styles[style ?? config.theme.style];
+}
+
+/** Turns a preset key like "rose-pine-dawn" into "rose pine dawn" for display. */
+export function themeLabel(key: string): string {
+  return key.replace(/-/g, " ");
+}
+
+/** Preset keys grouped for the theme picker, dark first. */
+export function groupedPresets(config: SiteConfig): {
+  dark: string[];
+  light: string[];
+} {
+  const entries = Object.entries(config.theme.presets);
+  return {
+    dark: entries.filter(([, p]) => p.appearance === "dark").map(([k]) => k),
+    light: entries.filter(([, p]) => p.appearance === "light").map(([k]) => k),
+  };
 }
 
 /** Maps a resolved palette + style onto the CSS custom properties in index.css. */

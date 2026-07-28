@@ -1,19 +1,11 @@
 {
-  "$comment": "Master switchboard — every knob you can turn without touching code. COLOUR and TYPOGRAPHY are independent: 'theme.preset' picks a palette from 'theme.presets', 'theme.style' picks a typography/surface treatment from 'theme.styles'. Any palette works with any style. 'sections' shows/hides whole sections; 'features' toggles the command palette and hero particles.",
+  "$comment": "Master switchboard. COLOUR and TYPOGRAPHY are independent: 'theme.preset' picks a palette from 'theme.presets', 'theme.style' picks a typography/surface treatment from 'theme.styles'. Add your own palette by copying any entry and changing the 8 values ('appearance' groups it in the theme picker). 'sections' shows/hides whole sections; 'features' toggles the command palette, hero particles, mouse glow and the on-page theme picker.",
   "theme": {
     "preset": "tokyo-day",
     "style": "terminal",
     "presets": {
-      "tokyo-day": {
-        "accent": "#2e7de9",
-        "background": "#e1e2e7",
-        "panel": "#d8d9e0",
-        "line": "#b6bbd1",
-        "headingText": "#1f2f66",
-        "bodyText": "#3760bf",
-        "mutedText": "#68709a"
-      },
       "tokyo-night": {
+        "appearance": "dark",
         "accent": "#7aa2f7",
         "background": "#1a1b26",
         "panel": "#202331",
@@ -22,7 +14,178 @@
         "bodyText": "#c0caf5",
         "mutedText": "#737aa2"
       },
+      "catppuccin-mocha": {
+        "appearance": "dark",
+        "accent": "#89b4fa",
+        "background": "#11111b",
+        "panel": "#181825",
+        "line": "#313244",
+        "headingText": "#f5e0dc",
+        "bodyText": "#cdd6f4",
+        "mutedText": "#9399b2"
+      },
+      "dracula": {
+        "appearance": "dark",
+        "accent": "#bd93f9",
+        "background": "#282a36",
+        "panel": "#303241",
+        "line": "#44475a",
+        "headingText": "#ffffff",
+        "bodyText": "#f8f8f2",
+        "mutedText": "#8a91b4"
+      },
+      "nord": {
+        "appearance": "dark",
+        "accent": "#88c0d0",
+        "background": "#2e3440",
+        "panel": "#343b49",
+        "line": "#434c5e",
+        "headingText": "#ffffff",
+        "bodyText": "#eceff4",
+        "mutedText": "#8792a8"
+      },
+      "gruvbox": {
+        "appearance": "dark",
+        "accent": "#d79921",
+        "background": "#282828",
+        "panel": "#32302f",
+        "line": "#504945",
+        "headingText": "#fbf1c7",
+        "bodyText": "#ebdbb2",
+        "mutedText": "#a89984"
+      },
+      "one-dark": {
+        "appearance": "dark",
+        "accent": "#61afef",
+        "background": "#282c34",
+        "panel": "#2c313a",
+        "line": "#3e4451",
+        "headingText": "#d7dae0",
+        "bodyText": "#abb2bf",
+        "mutedText": "#7f848e"
+      },
+      "solarized": {
+        "appearance": "dark",
+        "accent": "#268bd2",
+        "background": "#002b36",
+        "panel": "#073642",
+        "line": "#164a57",
+        "headingText": "#eee8d5",
+        "bodyText": "#93a1a1",
+        "mutedText": "#839496"
+      },
+      "kanagawa": {
+        "appearance": "dark",
+        "accent": "#7e9cd8",
+        "background": "#1f1f28",
+        "panel": "#252532",
+        "line": "#363646",
+        "headingText": "#f3ead3",
+        "bodyText": "#dcd7ba",
+        "mutedText": "#8f8d80"
+      },
+      "rose-pine": {
+        "appearance": "dark",
+        "accent": "#c4a7e7",
+        "background": "#191724",
+        "panel": "#1f1d2e",
+        "line": "#312f45",
+        "headingText": "#f4f0ff",
+        "bodyText": "#e0def4",
+        "mutedText": "#908caa"
+      },
+      "vesper": {
+        "appearance": "dark",
+        "accent": "#ffc799",
+        "background": "#101010",
+        "panel": "#1a1a1a",
+        "line": "#282828",
+        "headingText": "#ffffff",
+        "bodyText": "#ffffff",
+        "mutedText": "#7e7e7e"
+      },
+      "terminal": {
+        "appearance": "dark",
+        "accent": "#4a9eff",
+        "background": "#000000",
+        "panel": "#080808",
+        "line": "#1a1a1a",
+        "headingText": "#ffffff",
+        "bodyText": "#d8d8d8",
+        "mutedText": "#888888"
+      },
+      "tokyo-day": {
+        "appearance": "light",
+        "accent": "#2e7de9",
+        "background": "#e1e2e7",
+        "panel": "#d8d9e0",
+        "line": "#b6bbd1",
+        "headingText": "#1f2f66",
+        "bodyText": "#3760bf",
+        "mutedText": "#68709a"
+      },
+      "catppuccin-latte": {
+        "appearance": "light",
+        "accent": "#1e66f5",
+        "background": "#eff1f5",
+        "panel": "#e6e9ef",
+        "line": "#ccd0da",
+        "headingText": "#1e1e2e",
+        "bodyText": "#4c4f69",
+        "mutedText": "#6c6f85"
+      },
+      "gruvbox-light": {
+        "appearance": "light",
+        "accent": "#076678",
+        "background": "#fbf1c7",
+        "panel": "#f2e5bc",
+        "line": "#d5c4a1",
+        "headingText": "#282828",
+        "bodyText": "#3c3836",
+        "mutedText": "#665c54"
+      },
+      "one-light": {
+        "appearance": "light",
+        "accent": "#4078f2",
+        "background": "#fafafa",
+        "panel": "#f5f5f6",
+        "line": "#e5e5e6",
+        "headingText": "#202228",
+        "bodyText": "#383a42",
+        "mutedText": "#686b77"
+      },
+      "solarized-light": {
+        "appearance": "light",
+        "accent": "#268bd2",
+        "background": "#fdf6e3",
+        "panel": "#eee8d5",
+        "line": "#d6ceb8",
+        "headingText": "#073642",
+        "bodyText": "#657b83",
+        "mutedText": "#586e75"
+      },
+      "kanagawa-lotus": {
+        "appearance": "light",
+        "accent": "#4d699b",
+        "background": "#f2ecbc",
+        "panel": "#e5ddb0",
+        "line": "#cbcbd1",
+        "headingText": "#2a2a37",
+        "bodyText": "#545464",
+        "mutedText": "#77736a"
+      },
+      "rose-pine-dawn": {
+        "appearance": "light",
+        "accent": "#907aa9",
+        "background": "#faf4ed",
+        "panel": "#f2e9e1",
+        "line": "#e6ded7",
+        "headingText": "#191724",
+        "bodyText": "#464261",
+        "mutedText": "#797593"
+      },
       "midnight-teal": {
+        "appearance": "dark",
         "accent": "#2dd4bf",
         "background": "#0a0e17",
         "panel": "#0f1522",
@@ -32,6 +195,7 @@
         "mutedText": "#5b6b81"
       },
       "midnight-violet": {
+        "appearance": "dark",
         "accent": "#a78bfa",
         "background": "#0b0a14",
         "panel": "#131022",
@@ -41,6 +205,7 @@
         "mutedText": "#645d7d"
       },
       "deep-ocean-amber": {
+        "appearance": "dark",
         "accent": "#fbbf24",
         "background": "#0c1220",
         "panel": "#111a2c",
@@ -50,6 +215,7 @@
         "mutedText": "#5d6d87"
       },
       "paper-light": {
+        "appearance": "light",
         "accent": "#0d9488",
         "background": "#f8fafc",
         "panel": "#ffffff",
@@ -92,7 +258,8 @@
   "features": {
     "commandPalette": true,
     "particles": true,
-    "mouseGlow": true
+    "mouseGlow": true,
+    "themePicker": true
   },
   "meta": {
     "title": "Yash Choudhary — Senior Software Engineer",
