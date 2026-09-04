@@ -1,13 +1,60 @@
 {
   "items": [
     {
+      "slug": "transformer-semantic-gp",
+      "title": "Transformer Semantic Genetic Programming",
+      "kicker": "MSc capstone · symbolic regression",
+      "metric": "16× faster inference",
+      "summary": "Trained an encoder–decoder transformer (~934K parameters, 5M expression pairs) to act as the variation operator inside a genetic programming loop, replacing the usual crossover and mutation. Batched decoding and graph compilation cut inference from 1,375 ms to 84 ms per individual, turning a 291-hour benchmark grid into 10.5 hours.",
+      "tags": [
+        "PyTorch",
+        "Transformers",
+        "Genetic Programming",
+        "Symbolic Regression"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/yash-choudhary/Transformers-for-Genetic-Programming"
+        }
+      ],
+      "featured": true,
+      "caseStudy": "content/projects/transformer-semantic-gp.md"
+    },
+    {
+      "slug": "competitive-intelligence-agent",
+      "title": "Competitive Intelligence Agent",
+      "kicker": "Plan-then-execute LLM agent",
+      "metric": "0.95 → 1.00 accuracy",
+      "summary": "Built the goal-decomposition layer of a plan-then-execute agent on Gemma 4 with Gemini embeddings — 6 registered tools, native function calling, SQLite memory, and RAG over a Chroma vector store. Planning lifted answer accuracy from 0.95 to 1.00 and cut mean latency from 91.9 s to 75.1 s; retries, observation caps and batching held a 16K token/min budget and took a classification pass from ~45 min to ~1 min.",
+      "tags": [
+        "LLM Agents",
+        "RAG",
+        "Chroma",
+        "Gemini",
+        "Python"
+      ],
+      "links": [],
+      "featured": true
+    },
+    {
       "slug": "global-wheat-detection",
       "title": "Global Wheat Head Detection",
       "kicker": "Kaggle Global Challenge — 8th / 1800 teams",
       "metric": "0.7699 mAP",
       "summary": "End-to-end Faster R-CNN + ResNet-50 detection pipeline for wheat heads in field images. Improved results 17% using cut-mix, mix-up, mixed precision, test-time augmentation, and weighted box fusion.",
-      "tags": ["PyTorch", "Faster R-CNN", "Computer Vision", "Kaggle"],
-      "links": [{ "label": "Kaggle", "url": "https://www.kaggle.com/yashchoudhary" }],
+      "tags": [
+        "PyTorch",
+        "Faster R-CNN",
+        "Computer Vision",
+        "Kaggle"
+      ],
+      "links": [
+        {
+          "label": "Kaggle",
+          "url": "https://www.kaggle.com/yashchoudhary/gwd-eda-and-starter-code-beginner-friendly"
+        }
+      ],
       "featured": true,
       "caseStudy": "content/projects/global-wheat-detection.md"
     },
@@ -17,20 +64,18 @@
       "kicker": "Open source · 10★ on GitHub",
       "metric": "1.5 hrs → 1 sec",
       "summary": "Fine-tuned a VGG16-based encoder–decoder to stylize images of any size in real time — reducing style generation for 512×512 images from 1.5 hours to 1 second (98% faster). Train your own model for any style.",
-      "tags": ["PyTorch", "VGG16", "GANs & Style", "Python"],
-      "links": [
-        { "label": "GitHub", "url": "https://github.com/yash-choudhary/Very-Fast-Neural-Style-Transfer" }
+      "tags": [
+        "PyTorch",
+        "VGG16",
+        "GANs & Style",
+        "Python"
       ],
-      "featured": true
-    },
-    {
-      "slug": "workout-ai",
-      "title": "Workout AI",
-      "kicker": "Pose estimation · AI fitness assistant",
-      "metric": "89.2% accuracy",
-      "summary": "Real-time exercise assistant using AlphaPose that compares user webcam poses against trainer videos, helping users train correctly without injuring themselves.",
-      "tags": ["AlphaPose", "Computer Vision", "Python"],
-      "links": [{ "label": "GitHub", "url": "https://github.com/yash-choudhary/Workout-AI" }],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/yash-choudhary/Very-Fast-Neural-Style-Transfer"
+        }
+      ],
       "featured": true
     },
     {
@@ -39,9 +84,16 @@
       "kicker": "CCTV face recognition at classroom scale",
       "metric": "Whole-class recognition",
       "summary": "Face detection and recognition system that marks attendance for an entire classroom simultaneously from CCTV footage, with real-time student-engagement scoring to grade lecture quality.",
-      "tags": ["OpenCV", "Face Recognition", "Deep Learning"],
+      "tags": [
+        "OpenCV",
+        "Face Recognition",
+        "Deep Learning"
+      ],
       "links": [
-        { "label": "GitHub", "url": "https://github.com/yash-choudhary/Automatic_attendance_system" }
+        {
+          "label": "GitHub",
+          "url": "https://github.com/yash-choudhary/Automatic_attendance_system"
+        }
       ],
       "featured": false
     },
@@ -51,8 +103,17 @@
       "kicker": "Peer-reviewed publication · 2021",
       "metric": "Published research",
       "summary": "Automated detection and grading of diabetic retinopathy using CNNs. Published in the Turkish Journal of Physiotherapy and Rehabilitation, 32(3), 874–882 (Choudhary, Y., Eliazer, M., & Jain, A.).",
-      "tags": ["CNN", "Medical Imaging", "Research"],
-      "links": [],
+      "tags": [
+        "CNN",
+        "Medical Imaging",
+        "Research"
+      ],
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://www.semanticscholar.org/paper/AUTOMATED-DETECTION-AND-GRADING-OF-DIABETIC-USING-Choudhary-Eliazer/eb234ffae9f67cd2aefad72b7eacf93a915f9a67"
+        }
+      ],
       "featured": false
     }
   ]

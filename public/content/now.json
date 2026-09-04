@@ -1,14 +1,14 @@
 {
   "$comment": "The living 'Now' panel. Update this whenever life changes — takes 30 seconds.",
-  "updated": "2026-07-06",
+  "updated": "2026-09-05",
   "entries": [
     {
       "label": "Building",
-      "text": "My MSBA capstone — training transformer models on time-series data — and this website."
+      "text": "My MSc capstone — a transformer that replaces crossover and mutation inside a genetic programming loop for symbolic regression."
     },
     {
       "label": "Learning",
-      "text": "Decision modelling, meta-heuristics, and how to turn models into product decisions at UCD Smurfit."
+      "text": "How far LLM agents can be pushed on real research tasks — planning, tool calling, and retrieval that actually holds a token budget."
     },
     {
       "label": "Exploring",

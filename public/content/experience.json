@@ -7,11 +7,18 @@
       "start": "Apr 2025",
       "end": "Aug 2025",
       "bullets": [
-        "Migrated a production system from monolithic to microservice architecture, reducing running costs by nearly 30% and improving scalability",
-        "Overhauled a banking app authentication module, integrating 2FA and advanced security controls",
-        "Delivered a PMS mapping framework enabling integration with leading PMS services, capturing 54% of the US vacation rental market"
+        "Architected a monolith-to-microservices migration of a production system on Docker and Kubernetes, cutting running costs by nearly 30% and improving scalability",
+        "Designed a Kafka-based messaging layer to decouple services and handle rate-limiting and retries, boosting performance ~40%",
+        "Owned a PMS mapping framework end to end, unlocking integrations with leading providers and capturing 54% of the US vacation rental market",
+        "Mentored junior engineers through onboarding and product handovers"
       ],
-      "tags": ["Microservices", "Node.js", "Auth & Security", "System Design"]
+      "tags": [
+        "Docker",
+        "Kubernetes",
+        "Kafka",
+        "Microservices",
+        "Mentoring"
+      ]
     },
     {
       "role": "Full-Stack Developer",
@@ -20,11 +27,21 @@
       "start": "Jul 2022",
       "end": "Mar 2025",
       "bullets": [
-        "Improved banking application API throughput by 30% via Elasticsearch optimisation and Redis caching",
-        "Introduced messaging queues to decouple services and handle rate-limiting, boosting performance by ~40%",
-        "Built connector and mapping layers for IoT device integration, covering 76% of the US home automation market"
+        "Scaled a banking platform's API throughput 35% via Elasticsearch optimisation and Redis caching",
+        "Re-architected the authentication module end to end, shipping 2FA and advanced security controls to production",
+        "Built IoT device connector and mapping layers from the ground up over MQTT, reaching 76% of the US home automation market",
+        "Built and shipped user-facing features in Vue.js and TypeScript alongside the platform's backend services",
+        "Took part in the on-call rotation, diagnosing and resolving production issues",
+        "Ran sprint planning and retrospectives, driving delivery milestones"
       ],
-      "tags": ["Elasticsearch", "Redis", "Message Queues", "IoT", "APIs"]
+      "tags": [
+        "Vue.js",
+        "TypeScript",
+        "Elasticsearch",
+        "Redis",
+        "MQTT",
+        "Auth & Security"
+      ]
     },
     {
       "role": "Associate Software Engineer",
@@ -33,11 +50,16 @@
       "start": "Jul 2021",
       "end": "Jun 2022",
       "bullets": [
-        "Shipped contract approval and vendor e-signing with real-time status updates and immutable audit logging, cutting auditing costs by 30%",
-        "Modernised legacy product UI to Material UI standards, improving accessibility and developer velocity",
+        "Shipped contract approval and vendor e-signing for a B2B enterprise platform, with real-time status and immutable audit logging, cutting auditing costs 20%",
+        "Modernised legacy product UI onto a shared Material UI component library, improving accessibility and shipping velocity",
         "Awarded Star Performer twice for delivering mission-critical features ahead of schedule"
       ],
-      "tags": ["React", "Material UI", "Audit Logging", "Enterprise SaaS"]
+      "tags": [
+        "React",
+        "Material UI",
+        "Design Systems",
+        "Enterprise SaaS"
+      ]
     },
     {
       "role": "Platform Engineer Intern",
@@ -50,7 +72,11 @@
         "Built integration test suites covering full product functionality, cutting release cycles by ~15%",
         "Redesigned the theme manager, enhancing usability and adding dark mode"
       ],
-      "tags": ["Responsive UI", "Testing", "Theming"]
+      "tags": [
+        "Responsive UI",
+        "Testing",
+        "Theming"
+      ]
     },
     {
       "role": "Machine Learning Intern",
@@ -62,7 +88,12 @@
         "Built an ML model on historical transaction data for an Anti-Money-Laundering application, detecting fraudulent transactions in real time",
         "Worked across data management, Power BI / Sigma dashboards, OCR research, and cloud platforms (AWS, Azure, Snowflake)"
       ],
-      "tags": ["Machine Learning", "AML", "Power BI", "OCR"]
+      "tags": [
+        "Machine Learning",
+        "AML",
+        "Power BI",
+        "OCR"
+      ]
     }
   ]
 }

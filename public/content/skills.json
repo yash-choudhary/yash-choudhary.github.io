@@ -2,19 +2,74 @@
   "groups": [
     {
       "label": "Languages",
-      "items": ["Python", "TypeScript", "JavaScript", "Go", "SQL", "C++"]
+      "items": [
+        "Python 3",
+        "TypeScript",
+        "JavaScript",
+        "SQL",
+        "Go",
+        "C++"
+      ]
     },
     {
       "label": "Frameworks & Libraries",
-      "items": ["Node.js", "React", "FastAPI", "LangChain", "TensorFlow", "PyTorch"]
+      "items": [
+        "Django",
+        "FastAPI",
+        "Node.js",
+        "NestJS",
+        "React",
+        "Vue.js",
+        "PyTorch",
+        "TensorFlow",
+        "LangChain"
+      ]
     },
     {
-      "label": "Data & Platforms",
-      "items": ["PostgreSQL", "MongoDB", "Elasticsearch", "Redis", "AWS", "Power BI"]
+      "label": "Databases & Platforms",
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Elasticsearch",
+        "Redis",
+        "Kafka"
+      ]
+    },
+    {
+      "label": "AI",
+      "items": [
+        "LLM APIs",
+        "Agents & tool calling",
+        "RAG & vector search",
+        "Transformers",
+        "Inference optimisation"
+      ]
+    },
+    {
+      "label": "DevOps & Cloud",
+      "items": [
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "Terraform / IaC",
+        "CI/CD",
+        "MQTT",
+        "Observability",
+        "Agile / Scrum"
+      ]
     },
     {
       "label": "Specialisms",
-      "items": ["API Design", "Auth & Security", "Microservices", "System Migrations", "Computer Vision", "Analytics"]
+      "items": [
+        "Microservices",
+        "REST API design",
+        "Message queues & rate limiting",
+        "Caching & query performance",
+        "Design systems",
+        "Incident response",
+        "End-to-end ownership"
+      ]
     }
   ],
   "education": [
